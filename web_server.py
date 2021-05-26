@@ -9,7 +9,7 @@ class Serv(BaseHTTPRequestHandler):
 			self.path = '/index.html'
 		try:
 			# Aqui, ele abre o html que foi passado na rota
-			# (ex: home.html e index.html, pode adicionar quantas páginas quiser nessa pasta).
+			# (ex: /home.html, /arquivo.html, pode adicionar quantas páginas quiser nessa pasta).
 			file_to_open = open(self.path[1:]).read()
 			self.send_response(200)
 		except:
